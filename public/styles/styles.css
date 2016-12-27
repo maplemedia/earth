@@ -55,15 +55,17 @@ a:hover, a:focus, .no-touch .text-button:hover, .no-touch .text-button:focus, .t
 
 p.invisible, span.invisible, #sponsor.invisible {
     display: none;
+    color:#00000000;
 }
 
 svg {
+    background-color: rgba(0,0,0,0);
     overflow: hidden;  /* Do not let IE draw outside the bounds of the svg element. */
 }
 
 body {
-    color: #eeeeee;
-    background: #000005;
+    color: #a0a0a010;
+    background: #000000;
 }
 
 #warn {
@@ -85,11 +87,12 @@ body {
 }
 
 #sponsor {
+    display:none;
     position: absolute;
     text-align: right;
     bottom: 3%;
     right: 2%;
-    background-color: rgba(0, 0, 5, 0.6);
+    background-color: rgba(0, 0, 5, 0.6,0);
     border-radius: 0.5rem/0.5rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-size: 1.0rem;
@@ -101,6 +104,7 @@ body {
 
 #sponsor a {
     text-decoration: none;
+    background-color: rgba(0,0,0,0);
 }
 
 #details {
@@ -111,15 +115,17 @@ body {
 }
 
 #earth {
+    background-color: rgba(0,0,0,0);
     font-size: 2.4rem;
 }
 
 #status, #location, #menu {
     font-size: 1.75rem;
+    background-color: rgba(0, 0, 5, 0);
 }
 
 #status, #location, #earth {
-    background-color: rgba(0, 0, 5, 0.6);
+    background-color: rgba(0, 0, 5, 0);
     border-radius: 0.5rem/0.5rem;
     display: table;
     margin-top: 1rem;
@@ -128,7 +134,7 @@ body {
 }
 
 #menu {
-    background-color: rgba(5, 10, 30, 0.85);
+    background-color: rgba(5, 10, 30, 0);
     border-radius: 0.5rem/0.5rem;
     overflow: hidden;
     pointer-events: all;
@@ -151,6 +157,8 @@ body {
 }
 
 #progress {
+    background-color: rgba(0,0,0,0);
+    display:none;
     padding-left: 1rem;
 }
 
@@ -169,12 +177,15 @@ body {
 }
 
 #lang {
+    background-color: rgba(0,0,0,0);
     font-size: 1.25rem;
     float: right;
     padding-top: 0.5rem;
 }
 
 .social-icon {
+    background-color: rgba(0,0,0,0);
+    display: none;
     font-size: 2.25rem;
     font-family: monosocialiconsfont-sub,sans-serif;
     padding-left: 0.25rem;
@@ -223,85 +234,33 @@ body {
     stroke: #707070;
     stroke-width: 1.25;
     fill: none;
+    background-color: rgba(0,0,0,0);
 }
 
 .background-sphere {
     stroke: none;
-    fill: #303030;
+    fill: transparent;/*#303030;*/
+    background-color: rgba(0,0,0,0);
 }
 
 .foreground-sphere {
-    stroke: #000005;
+    background-color: rgba(0,0,0,0);
+    stroke: #00000500;
     stroke-width: 4.0;
-    fill: none;
+    fill: transparent;
     -moz-user-select: none;  /* Oddly, Win FF sometimes selects this SVG element. Disable. */
     user-select: none;
 }
 
 .location-mark {
-    stroke: #3aff3a;
+    stroke: #3aff3a00;
     stroke-width: 2.5;
     fill: none;
 }
-
-/**************************************************************************************************
- * About Page
- **************************************************************************************************/
-
-#about {
-    font-size: 1.5rem;
-}
-
-#about h1 {
-    font-size: 2.4rem;
-    text-align: center;
-    padding-top: 2rem;
-}
-
-#about div {
-    clear: both;
-}
-
-#about .blurb {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-#about .blurb img {
-    padding-top: 2rem;
-}
-
-#about img {
-    display: block;
-    margin: auto;
-}
-
-#about:first-child {
-    padding-top: 3rem;
-}
-
 #cover {
-    border: 1px solid #eeeeee;
+    border: 1px solid #eeeeee10;
 }
 
-#about .left {
-    width: 50%;
-    float: left;
-    text-align: right;
-}
-
-#about .right {
-    width: 50%;
-    float: right;
-}
-
-#about .center {
-    text-align: center;
-}
-
-#about .pad {
-    visibility: hidden;
-}
 
 #closing {
     padding-bottom: 2.5rem;

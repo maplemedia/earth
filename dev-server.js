@@ -21,7 +21,7 @@ function compressionFilter(req, res) {
  */
 function cacheControl() {
     return function(req, res, next) {
-        res.setHeader("Cache-Control", "public, max-age=300");
+        res.setHeader("Cache-Control", "public, max-age=30");
         return next();
     };
 }
@@ -40,10 +40,12 @@ function logger() {
         ':date - info: :remote-addr :req[cf-connecting-ip] :req[cf-ipcountry] :method :url HTTP/:http-version ' +
         '":user-agent" :referrer :req[cf-ray] :req[accept-encoding]\\n:request-all\\n\\n:response-all\\n');
 }
-
-var port = process.argv[2];
+var server_ip_address = "127.0.0.1"
+var port = (process.env.PORT || 5000);
 var express = require("express");
 var app = express();
+
+app.set('port', port);
 
 app.use(cacheControl());
 app.use(express.compress({filter: compressionFilter}));
@@ -51,4 +53,4 @@ app.use(logger());
 app.use(express.static("public"));
 
 app.listen(port);
-console.log("Listening on port " + port + "...");
+console.log("Listening on http://" + server_ip_address + ":" + port );
