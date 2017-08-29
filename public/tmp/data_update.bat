@@ -46,6 +46,7 @@ IF %CURRENTTIME%==11 (
     curl http://status.anapaapps.com/update.php --user-agent "git pushed %YYYYMMDD%%T%"
 )
 curl http://status.anapaapps.com/update.php --user-agent "earth updated %YYYYMMDD%%T%"
+curl https://earth-windcompass.herokuapp.com -k > NUL
 exit /b 0
 
 :adjustit
