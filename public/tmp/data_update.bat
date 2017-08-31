@@ -43,6 +43,7 @@ IF %CURRENTTIME%==11 (
     git add -A :/
     git commit -m "data update %YYYYMMDD%%T%"
     git push origin master
+	heroku ps:restart -a earth-windcompass
     curl http://status.anapaapps.com/update.php --user-agent "git pushed %YYYYMMDD%%T%"
 )
 curl http://status.anapaapps.com/update.php --user-agent "earth updated %YYYYMMDD%%T%"
