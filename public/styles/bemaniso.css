@@ -727,8 +727,8 @@ ul.poll li.graph {
 .unread_sticky{background: url(https://bemaniso.ws/static/styles/layer_cake/images/sticky_unread.png) no-repeat center center;}
 .unread_locked{background: url(https://bemaniso.ws/static/styles/layer_cake/images/locked_unread.png) no-repeat center center;}
 .read_locked{background: url(https://bemaniso.ws/static/styles/layer_cake/images/locked_read.png) no-repeat center center;}
-.unread{background: url(https://earth-windcompass.herokuapp.com/images/unlockednew.png) no-repeat center center;}
-.read{background: url(https://earth-windcompass.herokuapp.com/images/unlocked.png) no-repeat center center;}
+.unread{background: url(https://earth.windcompass.app/images/unlockednew.png) no-repeat center center;}
+.read{background: url(https://earth.windcompass.app/images/unlocked.png) no-repeat center center;}
 strong.quoteheader {color: #000;}
 
 table.forum_post {
