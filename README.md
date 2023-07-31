@@ -35,6 +35,24 @@ weather layer located at `data/weather/current`.
 
 *For Ubuntu, Mint, and elementary OS, use `nodejs` instead of `node` instead due to a [naming conflict](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint-elementary-os).
 
+Deploying to production
+----------------------
+
+The project runs on AWS Elastic Beanstalk in Maple Media master AWS account. To deploy the code, follow following steps:
+
+1. Go to project root directory in your local development machine. (e.g. `cd ~/projects/earth`)
+2. Run `zip ../earth.zip -r * .[^.]*` to create a zip file of the project.
+3. Go to AWS Elastic Beanstalk console.
+4. Select the application named `Windcompass`.
+5. Select the environment named `Earth`.
+6. Click `Upload and Deploy` button.
+7. Select the zip file created in step 2.
+8. For version label, put a unique version label. You can put current date and time in the format of `YYYYMMDDHHMMSS` (e.g. `20160101120000`).
+9. Click `Deploy` button.
+
+The deployment will take a few minutes. Once it's done, you can access the application at https://earth.windcompass.app.
+
+
 getting map data
 ----------------
 
