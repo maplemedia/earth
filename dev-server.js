@@ -41,7 +41,7 @@ function logger() {
         '":user-agent" :referrer :req[cf-ray] :req[accept-encoding]\\n:request-all\\n\\n:response-all\\n');
 }
 var server_ip_address = "127.0.0.1"
-var port = (process.env.PORT || 5000);
+var port = process.argv[2] || process.env.PORT || 5000;
 var express = require("express");
 var app = express();
 
